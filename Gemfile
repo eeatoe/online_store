@@ -23,6 +23,9 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
+# A framework for building reusable, testable & encapsulated view components in Ruby on Rails.
+gem "view_component", "~> 3.9"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
@@ -33,7 +36,7 @@ gem "jbuilder"
 # gem "kredis"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
+gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]
@@ -69,10 +72,17 @@ group :test do
   gem "selenium-webdriver"
 end
 
+# Solidus is an open source e-commerce framework for Ruby on Rails.
 gem "solidus", "~> 4.4"
 
+# Provides authentication and authorization services for use with Solidus by using Devise and CanCan.
 gem "solidus_auth_devise", "~> 2.5"
 
+# Admin interface for the Solidus e-commerce framework.
 gem "solidus_admin", ">= 0.2"
 
+# Integrate Tailwind CSS with the asset pipeline in Rails.
 gem "tailwindcss-rails", "~> 3.3"
+
+# A self-contained `tailwindcss` executable, wrapped up in a ruby gem. That's it. Nothing else.
+gem "tailwindcss-ruby", "~> 3.4"
