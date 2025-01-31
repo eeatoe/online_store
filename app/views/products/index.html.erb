@@ -1,8 +1,8 @@
-<h1>Все товары</h1>
+<div class="flex items-center justify-center h-screen">
+  <p class="text-5xl text-center font-bold">Все товары</p>
+</div>
 <ul>
   <% @products.each do |product| %>
-    <li>
-      <a href="<%= product_path(product) %>"><%= product.name %></a>
-    </li>
+    <%= render(ProductCardComponent.new(name: product.name, description: product.description)) %>
   <% end %>
 </ul>
