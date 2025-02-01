@@ -7,10 +7,30 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*.{erb,haml,html,slim}'
   ],
+  darkModel: 'media',
   theme: {
     extend: {
+      colors: {
+        // Цвета для светлой темы
+        background: '#FFFFFF',
+        text: '#1A1A1A',
+        secondaryText: '#4A5568',
+        border: '#E2E8F0',
+        contrast: '#3182CE',
+
+        // Цвета для темной темы (использовать dark:<name>)
+        dark: {
+          background: '#FFFFFF',
+          text: '#1A1A1A',
+          secondaryText: '#4A5568',
+          border: '#E2E8F0',
+          contrast: '#3182CE',
+        }
+      },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        main: ['Roboto', ...defaultTheme.fontFamily.sans],
+        secondary: ["Raleway", ...defaultTheme.fontFamily.sans],
+        // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
     },
   },

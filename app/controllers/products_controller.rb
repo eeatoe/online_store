@@ -3,3 +3,4 @@ class ProductsController < ApplicationController
     @products = Spree::Product.all
   end
 end
+

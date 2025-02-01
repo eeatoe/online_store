@@ -37,7 +37,15 @@ sudo apt update
 sudo apt install nodejs npm
 ```
 
-5. Running the Application:
+5. Installing components for work Webpacker:
+
+```bash
+sudo npm install -g corepack
+corepack enable
+corepack prepare yarn@stable --activate
+```
+
+6. Running the Application:
 
 ```bash
 # The application will be available at http://localhost:3000/
