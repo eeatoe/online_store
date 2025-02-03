@@ -1,8 +1,49 @@
-<div class="flex items-center justify-center h-screen">
-  <p class="text-5xl text-center font-bold">Все товары</p>
+<div class=" min-h-screen ">
+
+  <!-- Приветствие с изображением -->
+  <div class="container px-5 h-auto flex flex-col lg:flex-row items-center justify-center gap-10 bg-stone-100">
+
+    <!-- Текстовый блок -->
+    <div class="flex flex-col gap-8 text-center lg:text-left max-w-2xl">
+      <h1 class="font-main font-black text-5xl lg:text-6xl">
+        FIND CLOTHES THAT MATCHES YOUR STYLE
+      </h1>
+      <p class="font-secondary text-xl text-stone-800">
+        Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+      </p>
+    </div>
+
+    <!-- Изображение -->
+    <div class="flex justify-center">
+      <%= image_tag 'main_photo.png', class: 'w-full object-cover max-w-auto h-auto' %>
+    </div>
+  </div>
+
+  <!-- Кнопка -->
+  <div class="h-[8vh] bg-black">
+
+  </div>
+
+  <!-- Блок с заслугами -->
+  <div class="flex flex-row gap-10">
+    <div class="flex flex-col items-center justify-center">
+      <h1 class="font-main font-bold text-3xl lg:text-4xl">100+</h1>
+      <p class="font-secondary font-normal text-lg text-stone-800">Брендов</p>
+    </div>
+    <div>
+      
+    </div>
+  </div>
+
+
+  <div class="justify-center h-screen">
+    <p class="text-5xl text-center font-black">Все товары</p>
+  </div>
+
+  <div class="w-full flex flex-wrap justify-center">
+    <% @products.each do |product| %>
+      <%= render(ProductCardComponent.new(name: product.name, description: product.description)) %>
+    <% end %>
+  </div>
+
 </div>
-<ul>
-  <% @products.each do |product| %>
-    <%= render(ProductCardComponent.new(name: product.name, description: product.description)) %>
-  <% end %>
-</ul>

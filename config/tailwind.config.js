@@ -11,8 +11,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        black: '#000000',
+
         // Цвета для светлой темы
-        background: '#FFFFFF',
+        background: '#808080',
         text: '#1A1A1A',
         secondaryText: '#4A5568',
         border: '#E2E8F0',
@@ -29,8 +31,7 @@ module.exports = {
       },
       fontFamily: {
         main: ['Roboto', ...defaultTheme.fontFamily.sans],
-        secondary: ["Raleway", ...defaultTheme.fontFamily.sans],
-        // sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        secondary: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
     },
   },

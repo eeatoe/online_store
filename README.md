@@ -3,8 +3,9 @@
 ## Requirements
 
 Before running the application, ensure you have the following components installed:
-- Ruby (version 3.3.0) 
-- Rails (version 7.1.5) 
+
+- Ruby (version 3.3.0)
+- Rails (version 7.1.5)
 - PostgreSQL
 
 ## Getting Started
@@ -37,22 +38,12 @@ sudo apt update
 sudo apt install nodejs npm
 ```
 
-5. Installing components for work Webpacker:
-
-```bash
-sudo npm install -g corepack
-corepack enable
-corepack prepare yarn@stable --activate
-```
-
-6. Running the Application:
+```5. Running the Application:
 
 ```bash
 # The application will be available at http://localhost:3000/
 ./bin/dev
 ```
-
-
 ---
 
 This README would normally document whatever steps are necessary to get the

@@ -5,16 +5,14 @@ Rails.application.routes.draw do
     req.params['solidus_admin'] != 'false'
   }
 
-  namespace :store do
-    resources :products, only: [:index, :show] do
-      resources :categories, only: [:index, :show], controller: 'taxons'
-      get '/search', to: 'search#index'
-    end
-
-    resources :cart, only: [:show, :update, :destroy]
-    resources :checkout # Оформление заказа (потом)
-    resources :orders, only: [:index, :show] # Заказы (потом)
+  resources :products, only: [:index, :show] do
+    resources :categories, only: [:index, :show], controller: 'taxons'
+    get '/search', to: 'search#index'
   end
+
+  resources :cart, only: [:show, :update, :destroy]
+  resources :checkout # Оформление заказа (потом)
+  resources :orders, only: [:index, :show] # Заказы (потом)
 
   # Главная страница — Продукты
   root to: 'store/products#index'
