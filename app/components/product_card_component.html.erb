@@ -1,17 +1,21 @@
-<div class="w-72 mx-auto overflow-hidden border-stone-900 border-2 border-solid rounded-2xl shadow-md p-4">
+<div class="w-72 mx-auto overflow-hidden shadow-sm p-4">
   <!-- Изображение товара -->
-  <% if @product.images.any? %>
-    <div class="relative pb-[100%] overflow-hidden">
-      <%= image_tag @product.images.first.attachment.url(:large), class: "absolute object-cover" %>
-    </div>
+  <% if @product.images.any? && @product.images.first.attachment.present? %>
+    <%= image_tag @product.images.first.attachment.url(:large), class: "absolute object-cover rounded-3xl" %>
   <% else %>
     <div class="relative pb-[100%] overflow-hidden bg-gray-200"></div>
   <% end %>
 
+
   <!-- Контент карточки -->
-  <h2 class="text-xl font-semibold text-gray-700 mb-2"><%= @product.name %></h2>
-  <p class="text-base text-gray-600"><%= @product.description %></p>
+  <div class="flex flex-col gap-2">
+    <h2 class="font-main text-xl font-normal text-gray-700 mb-2"><%= @product.name %></h2>
+      <p class="font-secondary text-base text-gray-600">
+        <%= truncate(@product.description, length: 80, omission: "...") %>
+      </p>
 
-  <!-- Рейтинг -->
+    <!-- Рейтинг -->
 
+    <!-- Цена -->
+  </div>
 </div>

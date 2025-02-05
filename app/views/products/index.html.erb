@@ -38,21 +38,20 @@
     <div class="h-full">
       <%= image_tag 'main_photo.png', class: 'w-full h-full ml-auto object-bottom object-cover' %>
     </div>
-
   </div>
 
   <!-- Лента с брендами -->
   <div class="flex flex-row sm:flex-wrap gap-8 px-5 justify-between min-h-[8vh] h-auto bg-black">
-    <%= image_tag 'versace-logo.png', class: 'max-h-full max-w-[120px] object-contain' %>
-    <%= image_tag 'zara-logo.png', class: 'max-h-full max-w-[120px] object-contain' %>
-    <%= image_tag 'gucci-logo.png', class: 'max-h-full max-w-[120px] object-contain' %>
-    <%= image_tag 'prada-logo.png', class: 'max-h-full max-w-[120px] object-contain' %>
-    <%= image_tag 'calvin-klein-logo.png', class: 'max-h-full max-w-[120px] object-contain' %>
+    <% ['versace', 'zara', 'gucci', 'prada', 'calvin-klein'].each do |brand| %>
+      <%= image_tag "#{brand}-logo.png", class: "max-h-full max-w-[120px] object-contain" %>
+    <% end %>
   </div>
 
   <div class="justify-center m-12">
     <p class="text-5xl text-center font-black">Все товары</p>
   </div>
+
+
 
   <div class="w-full flex flex-wrap justify-center gap-4">
     <% @products.each do |product| %>
