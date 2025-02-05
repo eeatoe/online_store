@@ -82,7 +82,4 @@ gem "solidus_auth_devise", "~> 2.5"
 gem "solidus_admin", ">= 0.2"
 
 # Integrate Tailwind CSS with the asset pipeline in Rails.
-gem "tailwindcss-rails", "~> 3.3"
-
-# A self-contained `tailwindcss` executable, wrapped up in a ruby gem. That's it. Nothing else.
-gem "tailwindcss-ruby", "~> 3.4"
+gem 'tailwindcss-rails'

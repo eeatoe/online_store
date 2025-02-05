@@ -1,4 +1,17 @@
-<div class="bg-white shadow-lg rounded-lg p-4">
-  <h2 class="text-xl font-semibold"><%= @name %></h2>
-  <p class="text-gray-600"><%= @description %></p>
+<div class="w-72 mx-auto overflow-hidden border-stone-900 border-2 border-solid rounded-2xl shadow-md p-4">
+  <!-- Изображение товара -->
+  <% if @product.images.any? %>
+    <div class="relative pb-[100%] overflow-hidden">
+      <%= image_tag @product.images.first.attachment.url(:large), class: "absolute object-cover" %>
+    </div>
+  <% else %>
+    <div class="relative pb-[100%] overflow-hidden bg-gray-200"></div>
+  <% end %>
+
+  <!-- Контент карточки -->
+  <h2 class="text-xl font-semibold text-gray-700 mb-2"><%= @product.name %></h2>
+  <p class="text-base text-gray-600"><%= @product.description %></p>
+
+  <!-- Рейтинг -->
+
 </div>
